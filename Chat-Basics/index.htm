@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Chat-Basic</title>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#config-web-app -->
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDInHk2VNZncHJPtubxw3zjNbVx7rHLKwg",
+            authDomain: "chat-basics.firebaseapp.com",
+            databaseURL: "https://chat-basics.firebaseio.com",
+            projectId: "chat-basics",
+            storageBucket: "chat-basics.appspot.com",
+            messagingSenderId: "722850852022",
+            appId: "1:722850852022:web:188c0f27b99c1c19"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src = 'main.js'></script>
+    </head>
+    <body>
+        <h1 style = "text-align: center">CHAT-BASICS</h1><br>
+        <button name = 'btn' onclick='writeUserData("Aditya", "20")'>Add User</button>
+        <br> 
+        <input id = "InputBox"></input>
+        <button name = 'btnSend' onclick='send()'>Send</button>
+        <div id = 'chatBox'></div>
+        <script src = 'main.js'></script>
+    </body>
+</html>

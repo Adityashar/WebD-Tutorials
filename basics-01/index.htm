@@ -1,0 +1,172 @@
+<html>
+<head>
+	<title>Basics</title>
+	<meta charset='utf-8'>
+	<script src='https://unpkg.com/babel-standalone@6.26.0/babel.min.js'></script>
+	<script type='text/babel'>
+
+		// var x = 10;
+		// if (x) {
+		// 	let x = 5;
+		// }
+		// console.log(x)
+
+		const c = 35;
+		// c = 36;
+		
+		var firstName = 'Aman'
+		// var s = `Hello ${firstName}. How are you?`
+		// console.log(s)
+
+		var code = `
+<name>
+	<first>
+		${firstName}
+	</first>
+</name>`
+		// console.log(code)
+
+		// console.log('Hello'.repeat(3))
+
+		// var friends = ['bill', 'cathy']
+		// var allFriends = ['anne', ...friends, 'don']
+		// console.log(allFriends)
+
+		var phoneboook = {
+			'anne': 1234,
+			'bill': 2345
+		}
+
+		// phoneboook['cathy'] = 3456
+		// console.log(phoneboook)
+		var updatedPhonebook = {
+			...phoneboook,
+			'cathy': 34567
+		}
+		// console.log(updatedPhonebook)
+
+		var green = 'Green'
+		var colors = {
+			red: 'Red',
+			blue: 'Blue',
+			green,
+		}
+		// console.log(colors)
+
+		// var list = [10, 20, 30, 40]
+		// for (let v of list) {
+		// 	console.log(v)
+		// }
+
+		// for (let ch of 'Great') {
+		// 	console.log(ch)
+		// }
+
+		// function add(x=0, y=0) {
+		// 	return x + y
+		// }
+
+		// console.log(add(1))
+
+		// Object Literal
+		var person = {
+			name: 'John',
+			getName() {
+				return this.name
+			}
+		}
+
+		// console.log(person.getName())
+
+		// function square(x) {
+		// 	return x*x
+		// }
+
+		var list = [10, 20, 30, 40];
+		var list2 = list.map(function(i){
+			return i*i
+		})
+		// console.log(list2)
+
+		var list3 = list.filter(function(i){
+			return i%20==0
+		})
+		// console.log(list3)
+
+
+		var square = x => x*x
+		var multiply = (x,y) => x*y
+
+		// console.log(square(5))
+
+
+
+		var person = {
+			name: 'Bill',
+			interests: ['bike','swim','surf'],
+			// printMe() {
+			// 	var _this = this;
+			// 	this.interests.map(function(i){
+			// 		console.log(_this.name+' likes to '+i)
+			// 	})
+			// }
+			// printMe() {
+			// 	this.interests.map(function(i){
+			// 		console.log(this.name+' likes to '+i)
+			// 	}.bind(this))
+			// }
+			printMe() {
+				this.interests.map(i => console.log(this.name+' likes to '+i))
+			}
+		}
+
+		// person.printMe()
+
+		// Destructuring
+		var [first, ,third] = ['one','two','three','four']
+		// console.log(first)
+		// console.log(third)
+
+		var book = {
+			author: 'Godin',
+			title: 'Tribes',
+			price: '$20'
+		}
+
+		// var author = book.author;
+		// var price = book.price;
+
+		// var {author, price} = book
+
+		// var {title} = book;
+
+		// console.log(author, price)
+
+		// function foo( {title} ) {
+		// 	console.log(title)
+		// }
+
+		// foo(book)
+
+		// class Person {
+
+		// }
+
+		// Fetch
+
+		// Non-blocking
+
+		var url = "https://jsonplaceholder.typicode.com/users"
+		fetch(url)
+		.then(res => res.json())
+		.then(data=>console.log(data))
+
+		console.log('Hello')
+
+	</script>
+	<script src='main.js'></script>
+</head>
+<body>
+	<h1>Coding</h1>
+</body>
+</html>

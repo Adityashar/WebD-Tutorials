@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title></title>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href = "style.css">
+</head>
+<body>
+    <form name = 'Calculator'>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <input type = 'text' name = 'display' id = 'display' disabled>
+                </td>
+                <td><input type = 'button' name = 'clear' value = 'C' onclick="Calculator.display.value = '0'"></td>
+            </tr>
+            <tr>
+                <td><input type = 'button' name = 'seven' value = '7' onclick="Calculator.display.value += '7'"></td>
+                <td><input type = 'button' name = 'eight' value = '8' onclick="Calculator.display.value += '8'"></td>
+                <td><input type = 'button' name = 'nine' value = '9' onclick="Calculator.display.value += '9'"></td>
+                <td><input type = 'button' name = 'plus' class = 'operator' value = '+' onclick="Calculator.display.value += '+'"></td>
+            </tr>
+            <tr>
+                    <td><input type = 'button' name = 'four' value = '4' onclick="Calculator.display.value += '4'"></td>
+                    <td><input type = 'button' name = 'five' value = '5' onclick="Calculator.display.value += '5'"></td>
+                    <td><input type = 'button' name = 'six' value = '6' onclick="Calculator.display.value += '6'"></td>
+                    <td><input type = 'button' name = 'minus' class = 'operator' value = '-' onclick="Calculator.display.value += '-'"></td>
+            </tr>
+            <tr>
+                    <td><input type = 'button' name = 'one' value = '1' onclick="Calculator.display.value += '1'"></td>
+                    <td><input type = 'button' name = 'two' value = '2' onclick="Calculator.display.value += '2'"></td>
+                    <td><input type = 'button' name = 'three' value = '3' onclick="Calculator.display.value += '3'"></td>
+                    <td><input type = 'button' name = 'multiply' class = 'operator' value = '*' onclick="Calculator.display.value += '*'"></td>
+            </tr>
+            <tr>
+                    <td><input type = 'button' name = 'equal' value = '=' onclick="Calculator.display.value = eval(Calculator.display.value)"></td>
+                    <td><input type = 'button' name = 'dot' value = '.' onclick="Calculator.display.value += '.'"></td>
+                    <td><input type = 'button' name = 'zero' value = '0' onclick="Calculator.display.value += '0'"></td>
+                    <td><input type = 'button' name = 'divide' class = 'operator' value = '/' onclick="Calculator.display.value += '/'"></td>
+            </tr>
+        </table>
+    </form>
+    
+    
+    <br><br>
+    
+    
+    
+    <h3>Calculator</h3>
+    <!-- EDIT CONTENT INSIDE BODY TAG WITHIN OTHER TAGS SUCH AS <P> or <H1> 
+        USE FORM AS A WRPPER FOR TABLE COMMAND-->
+    <span id='result' style="display:inline-block;width:75px;overflow:hidden"></span>
+    
+    <button onClick='handleClick("C")'>C</button>
+	<br/>
+	<button onClick='handleClick(7)'>7</button>
+	<button onClick='handleClick(8)'>8</button>
+	<button onClick='handleClick(9)'>9</button>
+	<button onClick='handleClick("/")'>/</button>
+	<br/>
+	<button onClick='handleClick(4)'>4</button>
+	<button onClick='handleClick(5)'>5</button>
+	<button onClick='handleClick(6)'>6</button>
+	<button onClick='handleClick("*")'>*</button>
+	<br/>
+	<button onClick='handleClick(1)'>1</button>
+	<button onClick='handleClick(2)'>2</button>
+	<button onClick='handleClick(3)'>3</button>
+	<button onClick='handleClick("-")'>-</button>
+	<br/>
+	<button onClick='handleClick(".")'>.</button>
+	<button onClick='handleClick(0)'>0</button>
+	<button onClick='handleClick("=")'>=</button>
+	<button onClick='handleClick("+")'>+</button>
+	<br/>
+</body>
+</html>
